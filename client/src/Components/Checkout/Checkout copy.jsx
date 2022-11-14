@@ -254,31 +254,31 @@ const delTicketsEvent = (e) => {
   console.log("estado candy: " + JSON.stringify(stateCandy));
   console.log("userCarrito:", userCarrito);
   return (
-      // <nav class="navbar-checkout navbar-collapse collapse d-flex flex-column justify-content-start" id={toogle ? "sidebar-active" : null} >
-      <nav class="navbar-checkout navbar-collapse collapse d-flex flex-column justify-content-center" id="Navcollapse" >
-         <div className="bton"> <button className="closebutton" onClick={()=>close(false)}><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+      // <nav className="navbar-checkout navbar-collapse collapse d-flex flex-column justify-content-start" id={toogle ? "sidebar-active" : null} >
+      <nav classNameName="navbar-checkout navbar-collapse collapse d-flex flex-column justify-content-center" id="Navcollapse" >
+         <div classNameName="bton"> <button classNameName="closebutton" onClick={()=>close(false)}><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
   <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
 </svg></button></div>
-        <h3 className="mt-4 ml-5 font-weight-bold text-white">{title || 'generic title'}</h3>
+        <h3 classNameName="mt-4 ml-5 font-weight-bold text-white">{title || 'generic title'}</h3>
          <iframe src={movie.Trailer} alt="" width="400px" height="300px"/>
-        <ul className="navbar-nav d-flex flex-column mt-5 w-100">
-          <li className="nav-item w-100">
+        <ul classNameName="navbar-nav d-flex flex-column mt-5 w-100">
+          <li classNameName="nav-item w-100">
               {NumTickets || `Tickets: ${boletos} `} 
               <input type="button" value="X" style={{backgroundColor: "red", padding:"0 5px"}} 
                 onClick={(e) => delTicketsEvent(e)} ></input>
           </li>
-          <li className="nav-item w-100">
-            <a href="#" className="nav-link text-light pl-4">
+          <li classNameName="nav-item w-100">
+            <a href="#" classNameName="nav-link text-light pl-4">
               {horario ? `Fecha: Jueves ${horario}` : `Fecha: Jueves 0:00`}
             </a>
           </li>
-          <li className="nav-item w-100">
-            <a href="#" className="nav-link text-white pl-4">
+          <li classNameName="nav-item w-100">
+            <a href="#" classNameName="nav-link text-white pl-4">
               {sala || " Sala: 99"}
             </a>
           </li>
-          <li className="nav-item w-100">
-            <a href="#" className="nav-link text-white pl-4">
+          <li classNameName="nav-item w-100">
+            <a href="#" classNameName="nav-link text-white pl-4">
               {idioma || 'Idioma: Español'}
             </a>
           </li>
@@ -290,14 +290,14 @@ const delTicketsEvent = (e) => {
           <div>
       <button
         type="button"
-        class="btn btn-warning"
+        className="btn btn-warning"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop1"
       >Dulceria
       </button>
 
       <div
-        class="modal fade"
+        className="modal fade"
         id="staticBackdrop1"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
@@ -305,22 +305,22 @@ const delTicketsEvent = (e) => {
         aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content bg-dark">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">
+        <div className="modal-dialog modal-lg">
+          <div className="modal-content bg-dark">
+            <div className="modal-header">
+              <h5 className="modal-title" id="staticBackdropLabel">
                 ¡Disfruta de tu funcion con estas promos!
               </h5>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
-              <div class="row align-items-start">
-                <div class="col-12">
+            <div className="modal-body">
+              <div className="row align-items-start">
+                <div className="col-12">
                 {
                     storeCandy.map( item => (
                         <div>
@@ -333,10 +333,10 @@ const delTicketsEvent = (e) => {
                             <input type="number" min='1' max="100" style={{width: '60px'}} name={item.name} onChange={handleClick} 
                                 value={eval(item.name.split(' ')[1]).value}
                             />
-                            <button type="button" class="btn btn-warning" onClick={handleSubmit} name={item.name} >
+                            <button type="button" className="btn btn-warning" onClick={handleSubmit} name={item.name} >
                                 Agregar
                             </button>
-                            <button type="button" class="btn btn-warning" onClick={handleSubmit} name={item.name + 'delete'}>
+                            <button type="button" className="btn btn-warning" onClick={handleSubmit} name={item.name + 'delete'}>
                         Eliminar
                     </button>
                         </div>
@@ -344,16 +344,16 @@ const delTicketsEvent = (e) => {
                  
                 }
                 </div>
-                {/* <div class="col">One of three columns</div>
-                <div class="col">One of three columns</div> */}
+                {/* <div className="col">One of three columns</div>
+                <div className="col">One of three columns</div> */}
               </div>
               
               <hr />
 
-              <div class="row align-items-start">
-                <div class="col-12">
+              <div className="row align-items-start">
+                <div className="col-12">
                   <h3>Agregar productos</h3>
-                  <div class="">
+                  <div className="">
                     <img
                         src="https://static.cinepolis.com/marcas/dulceria/imagenes/productos/8/2015525172827605.png"
                         width={"120px"}
@@ -361,7 +361,7 @@ const delTicketsEvent = (e) => {
                     <input type="number" min='0' max="100" style={{width: '60px', display:"inline"}} name="cafe"
                         onChange={handleClick} value={cafe}
                     />
-                    <button type="button" className="btn btn-warning" onClick={handleSubmit} name="cafe"
+                    <button type="button" classNameName="btn btn-warning" onClick={handleSubmit} name="cafe"
                     >
                         Agregar
                     </button>
@@ -375,7 +375,7 @@ const delTicketsEvent = (e) => {
                     <input type="number" min='0' max="100" style={{width: '60px'}} name="refresco"
                         onChange={handleClick} value={refresco}
                     />
-                    <button type="button" class="btn btn-warning" onClick={handleSubmit} name="refresco">
+                    <button type="button" className="btn btn-warning" onClick={handleSubmit} name="refresco">
                         Agregar
                     </button>
                   </div>
@@ -388,27 +388,27 @@ const delTicketsEvent = (e) => {
                     <input type="number" min='0' max="100" style={{width: '60px'}} onChange={handleClick} value={hotdog} 
                         name="hotdog"
                     />
-                    <button type="button" class="btn btn-warning" onClick={handleSubmit} name="hotdog">
+                    <button type="button" className="btn btn-warning" onClick={handleSubmit} name="hotdog">
                         Agregar
                     </button>
     
                   </div>
 
                 </div>
-                {/* <div class="col">One of three columns</div>
-                <div class="col">One of three columns</div> */}
+                {/* <div className="col">One of three columns</div>
+                <div className="col">One of three columns</div> */}
               </div>
 
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                className="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
                 Close
               </button>
-              <button type="button" class="btn btn-warning">
+              <button type="button" className="btn btn-warning">
                 Ir al carrito
               </button>
             </div>
@@ -419,24 +419,24 @@ const delTicketsEvent = (e) => {
 
           <hr />
 
-          <li className="nav-item w-100">
-            <a href="#" className="nav-link text-white pl-4">
+          <li classNameName="nav-item w-100">
+            <a href="#" classNameName="nav-link text-white pl-4">
             <b>Total a pagar : ${granTotal}</b>
             </a>
           </li>
         </ul>
 
         <hr />
-        <button type="button" class="btn btn-warning">Realizar Pago</button>
+        <button type="button" className="btn btn-warning">Realizar Pago</button>
 
       </nav>
 
   );
               }
-// <div class="container-fluid" >
-//     <div class="row">
+// <div className="container-fluid" >
+//     <div className="row">
 //         {/* Pruebasaaaaa */}
-//         <nav class="col-md-6 col-lg-2 d-md-block bg-dark sidebar collapse">
+//         <nav className="col-md-6 col-lg-2 d-md-block bg-dark sidebar collapse">
 //             <h1>Insertando datooooos</h1>
 //         </nav>
 //     </div>

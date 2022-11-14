@@ -31,7 +31,7 @@ export default function Candy() {
           {allCandy &&
             price.map((c,index) => {
               return (
-                <div class="col-6 text-center my-2" key={index}>
+                <div className="col-6 text-center my-2" key={index}>
                   <h5>{c.name}</h5>
                   <img src={c.picture} alt="img not found" className="picture" />
                   <p>Precio: US${c.price}</p>

@@ -157,7 +157,7 @@ export default function SalesBalanceMovies(){
                   <td>{u.totalPrice}</td>
                   <td>{u.totalPrice * 0.6}</td>
                   <td>
-                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdropp" style={{cursor:"pointer"}} onClick={(e)=>handleInfo(u.movie,u.type)}><i class="bi bi-info-circle"></i></button>
+                    <button className="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdropp" style={{cursor:"pointer"}} onClick={(e)=>handleInfo(u.movie,u.type)}><i class="bi bi-info-circle"></i></button>
                   </td>
                   <InfoSalesMovies allMovies={allMovies} month={u.date}/>
                 </tr>

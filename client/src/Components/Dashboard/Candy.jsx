@@ -34,7 +34,7 @@ export default function Candy(){
         <div className="btn-toolbar mb-2 mb-md-0">
           <form onSubmit={(e)=>handleSubmitSearch(e)} className="btn-group me-2">
             <input type= "text" value={input} placeholder="Buscar producto..." onChange={(e)=>handleChangeSearch(e)}></input>
-            <button type="submit" class="btn btn-sm btn-outline-secondary">Buscar</button>
+            <button type="submit" className="btn btn-sm btn-outline-secondary">Buscar</button>
           </form>
           <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>dispatch(getCandy())}>
             Ver todos
