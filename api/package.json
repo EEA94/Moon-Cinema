@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compilar": "ts-node-dev index.ts",
-    "dev": "nodemon index.ts",
-    "build": "prisma generate",
-    "generate": "tsc --build",
-    "start": "node compilacion/index.js",
+    "start": "prisma migrate deploy && node compilacion/index.js",
+    "dev": "ts-node index.ts",
+    "build": "prisma generate && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
